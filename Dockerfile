@@ -5,6 +5,8 @@ FROM alpine:3.19
     && rm -rf /var/cache/apk/* \
     && chown lighttpd:lighttpd /var/www/localhost/htdocs
 
+  COPY ./lighttpd.conf /etc/lighttpd/lighttpd.conf
+
   USER lighttpd
   EXPOSE 5000
 
