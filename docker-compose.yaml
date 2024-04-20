@@ -1,0 +1,16 @@
+networks:
+  lighttpd:
+
+services:
+  lighttpd:
+    image: local/lighttpd:latest
+    build: .
+    restart: always
+    networks:
+      - lighttpd
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./lighttpd.conf:/etc/lighttpd/lighttpd.conf:ro"
+      - "./static:/var/www/localhost/htdocs:ro"
+    tty: true # required
