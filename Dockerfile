@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.19.0
 
   RUN  apk upgrade --update --no-cache \
     && apk add --update --no-cache lighttpd \
