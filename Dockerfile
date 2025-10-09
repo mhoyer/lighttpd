@@ -1,4 +1,4 @@
-FROM alpine:3.22.1
+FROM alpine:3.22.2
 
   RUN  apk upgrade --update --no-cache \
     && apk add --update --no-cache lighttpd \
